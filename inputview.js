@@ -6,24 +6,22 @@ export class InputView {
       this.app = document.getElementById('app');
     }
   
-    render(text) {
-      let html = `<h2>${text}</h2>
-      <p>
-      <label>Vorname:</label>
+    render() {
+      let html = `<h2>Neue Person hinzufügen</h2>
+      <fieldset>
+      <legend>Vorname:</legend>
       <input type="text" id="vorname"/>
-      </p>
-      <p>
-      <label>Nachname:</label>
+      </fieldset>
+      <fieldset>
+      <legend>Nachname:</legend>
       <input type="text" id="nachname"/>
-      </p>
-      <p>
-      <label>Geburtsdatum:</label>
+      </fieldset>
+      <fieldset>
+      <legend>Geburtsdatum:</legend>
       <input type="date" id="geburtsdatum"/>
-      </p>
-      <p>
+      </fieldset>
       <button id="safe">Speichern</button>
-      <button id="interrupt">Abbrechen</button>
-      </p>`;      
+      <button id="interrupt">Abbrechen</button>`;      
       this.app.innerHTML = html;
       this._addEventListener();
     }

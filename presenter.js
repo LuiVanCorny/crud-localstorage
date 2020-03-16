@@ -11,7 +11,7 @@ export class Presenter {
 
   buttonNewClicked(){
     this.view = new InputView(this);
-    this.view.render("Neue Person hinzufügen");
+    this.view.render();
   }
 
   buttonSafeClick(){
@@ -22,6 +22,11 @@ export class Presenter {
 
   buttonInterruptClick(){
    this._showListView();
+  }
+
+  buttonDeleteClick(id){
+    this.model.deletePerson(id);
+    this._showListView();
   }
 
   _showListView(){

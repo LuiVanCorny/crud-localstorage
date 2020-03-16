@@ -35,5 +35,8 @@ export class Model {
   //UPDATE
 
   //DELETE
+  deletePerson(index){
+    this.personen.splice(index,1);
+  }
 
 }
