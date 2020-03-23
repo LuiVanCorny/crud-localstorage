@@ -3,8 +3,8 @@ export class DAO {
   
     readData() {
       let dataArray = [];
-      if (localStorage.getItem('data')) {
-        let dataString = localStorage.getItem('data');
+      if (localStorage.getItem('personen')) {
+        let dataString = localStorage.getItem('personen');
         dataArray = JSON.parse(dataString);
       }
       return dataArray;
@@ -12,6 +12,6 @@ export class DAO {
   
     saveData(dataArray) {
       let dataString = JSON.stringify(dataArray);
-      localStorage.setItem('data', dataString);
+      localStorage.setItem('personen', dataString);
     }
   }
