@@ -14,10 +14,18 @@ export class ListView {
           let vorname = person.vorname;
           let nachname = person.nachname;
           let geburtsdatum = person.geburtsdatum;
+          let haare = "nein";
+          let haarfarbe = "";
+          if(person.haare == true){
+             haare = "ja";
+             haarfarbe = `Haarfarbe: ${person.haarfarbe}`
+          }
         html += `<li>Vorname: ${vorname} 
         Nachname: ${nachname} 
-        Geburtsdatum: ${geburtsdatum}
-        <button class='delete' id="${index}">X</button></li>`;
+        Geburtsdatum: ${geburtsdatum} 
+        Haare: ${haare} `;
+        html += haarfarbe;
+        html +=`<button class='delete' id="${index}">X</button></li>`;
         index++;
       });   
       html += '</ul>';
